@@ -144,7 +144,7 @@ while($row=mysqli_fetch_assoc($result)){ ?>
 <td data-label="Product Category" align="center"><?php echo $row["pcat"]; ?> </td>
 <td data-label="Product Information" align="center"><?php echo $row["pinfo"]; ?> </td>
 <td data-label="Price" align="center"><?php echo $row["price"]; ?> </td>
-<td data-label="Product Image" align="center"><img src="<?php echo $picDestination = "images/productImages/".$row['pimage'];?>" alt="" width="200" height="150" > </td>
+<td data-label="Product Image" align="center"><img src="<?php echo $picDestination = "productImages/".$row['pimage'];?>" alt="" width="200" height="150" > </td>
 <td data-label="Delete" align="center"><a href="pdelete.php?pid=<?php echo $row['pid']; ?> "><button class="btn2">Delete</button></a></td>
 </tr>
 <?php $count++; } ?>
