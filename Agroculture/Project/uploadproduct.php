@@ -45,9 +45,11 @@
 				$_SESSION['productPicId'] = $_SESSION['id'];
 				$picNameNew = $productName.$_SESSION['productPicId'].".".$picActualExt ;
 				$_SESSION['productPicName'] = $picNameNew;
-				$_SESSION['productPicExt'] = $picActualExt;
+				$_SESSION['productPicExt'] = $picActualExt;				
 				$picDestination = "images/productImages/".$picNameNew;
+                		$picDestination2 = "C:/xampp/htdocs/Agroculture/Admin/productImages/".$picNameNew;
 				move_uploaded_file($picTmpName, $picDestination);
+                		copy($picDestination, $picDestination2);
 				$id = $_SESSION['id'];
 
 				$sql = "UPDATE fproduct SET picStatus=1, pimage='$picNameNew' WHERE product='$productName';";
